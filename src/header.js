@@ -32,7 +32,7 @@ export default class HeadBar extends Component {
         <View>
             <Header
                 leftComponent={<HeaderLeft toggle={this.props.toggle} />}
-                centerComponent={{ text: 'Inbox', style: { color: '#fff', fontSize: 20, fontWeight: 'bold'} }}
+                centerComponent={{ text: 'Inbox', style: { color: '#fff', fontSize: 20, fontWeight: 'bold', justifyContent: 'center', alignItems:'center'} }}
                 rightComponent={<HeaderRight />}
                 backgroundColor={COLORS.info}
             /> 

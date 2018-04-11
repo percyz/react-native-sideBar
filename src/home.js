@@ -44,15 +44,15 @@ export default class Home extends Component {
             </View>
 
             <View style={styles.inboxMiddle}>
-            <Text style={styles.welcome}>
-              {val.name}
-            </Text>
-            <Text>
-              {val.type}
-            </Text>
-            <Text style={styles.instructions}>
-              {val.text}
-            </Text>
+              <Text style={styles.welcome}>
+                {val.name}
+              </Text>
+              <Text>
+                {val.type}
+              </Text>
+              <Text style={styles.instructions}>
+                {val.text}
+              </Text>
             </View>
 
             <View style={styles.inboxRight}>
@@ -70,7 +70,7 @@ export default class Home extends Component {
     });
 
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, { backgroundColor: this.props.isOpen?'#CCCCCC':'#F5FCFF'}]}>
         <View style={styles.title}>
           <Text style={styles.welcome}>
             Today
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
+   
   },
 
   title: {
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
 
   instructions: {
     textAlign: 'left',
-    color: '#333333',
+    color: COLORS.instructions,
     margin: 2,
   },
 });

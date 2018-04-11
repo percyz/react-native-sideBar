@@ -47,7 +47,7 @@ export default class App extends Component {
       >
         <HeadBar toggle={this.toggle} />
 
-        <Home />
+        <Home isOpen={this.state.isOpen} />
         
       </SideMenu>
     );
