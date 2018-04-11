@@ -32,7 +32,7 @@ export default class HeadBar extends Component {
         <View>
             <Header
                 leftComponent={<HeaderLeft toggle={this.props.toggle} />}
-                centerComponent={{ text: 'Inbox', style: { color: '#fff', fontSize: 20, fontWeight: 'bold', justifyContent: 'center', alignItems:'center'} }}
+                centerComponent={<HeaderMiddle />}
                 rightComponent={<HeaderRight />}
                 backgroundColor={COLORS.info}
             /> 
@@ -49,6 +49,18 @@ class HeaderLeft extends Component {
                 backgroundColor='transparent'
                 onPress={this.props.toggle}
             />  
+        );
+  }
+}
+
+class HeaderMiddle extends Component {
+    render() {
+        return (
+            <View style={styles.headerMiddleView}>
+                <Text style={styles.headerMiddleText}>
+                    Inbox
+                </Text>
+            </View> 
         );
   }
 }
@@ -72,6 +84,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+
+  headerMiddleView: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center', 
+    alignItems:'center',
+    marginLeft : -LAYOUT.SCREEN_WIDTH / 3,
+  },
+
+  headerMiddleText: {
+    color: '#fff', 
+    fontSize: 20, 
+    fontWeight: 'bold', 
   },
 
 });

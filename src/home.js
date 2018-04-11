@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row', 
     justifyContent:'flex-start',  
     paddingTop: LAYOUT.SCREEN_HEIGHT / 50,
-    paddingLeft: LAYOUT.SCREEN_HEIGHT / 30,
+    paddingLeft: LAYOUT.SCREEN_HEIGHT / 25,
   },
 
   content: {
@@ -107,8 +107,9 @@ const styles = StyleSheet.create({
   inboxFrame: {
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'flex-start',
+    paddingTop: LAYOUT.SCREEN_HEIGHT / 40,
   },
 
   inboxLeft: {

@@ -28,11 +28,11 @@ export default class SideBar extends Component {
 
   getMenu() {
     return [
-      {name: 'Inbox', icon: 'inbox'},
-      {name: 'Outbox', icon: 'dropbox'},
-      {name: 'Draft', icon: 'file'},
-      {name: 'Delete', icon: 'trash'},
-      {name: 'Archive', icon: 'archive'},
+      {_id: '1', name: 'Inbox', icon: 'inbox'},
+      {_id: '2', name: 'Outbox', icon: 'dropbox'},
+      {_id: '3', name: 'Draft', icon: 'file'},
+      {_id: '4', name: 'Delete', icon: 'trash'},
+      {_id: '5', name: 'Archive', icon: 'archive'},
     ]
   }
 
@@ -46,7 +46,7 @@ export default class SideBar extends Component {
 
     const menuList = this.getMenu().map((val) => {
       return(
-        <View style={styles.menuItem}>
+        <View style={styles.menuItem} key={val._id} >
           <View style={styles.menuIcon}>
             <Icon.Button
                 name={val.icon}
@@ -57,8 +57,7 @@ export default class SideBar extends Component {
           <Text style={styles.menuTitle}>{val.name}</Text>
         </View>
       )
-    })
-
+    });
 
     return (
       <View style={styles.container}>
